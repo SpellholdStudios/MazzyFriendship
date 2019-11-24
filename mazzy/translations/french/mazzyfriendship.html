@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+    /*<![CDATA[*/
+    <!-- 
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      
+      h2 {
+        display: block;
+        font-family: Verdana, Trebuchet MS, Arial, serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      
+      #maindiv address a:link,
+      #maindiv address a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      
+      #maindiv .important::before {
+        display: none;
+      }
+      
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        *margin-left: 65px;
+      }
+      
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        *margin-left: 70px;
+      }
+      
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        *float: none;
+        *margin-left: 65px;
+        line-height: 22px;
+      }
+      
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        *float: none;
+        line-height: 22px;
+      }
+      
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+        *margin: 0;
+        *padding: 0;
+      }
+      
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      
+      h4 {
+        font-size: 125%;
+      }
+      
+      h5 {
+        font-size: 100%;
+      }
+      
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      
+      a:link,
+      a:visited {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+
+    -->
+    /*]]>*/
+    </style>
+    <title>SPELLHOLD STUDIOS - Mazzy Friendship</title>
+  </head>
+  <body>
+    <a name="top" id="top"></a>
+    <div id="wrap">
+      <div id="header">
+        <h1>Mazzy Friendship</h1>
+        <strong>Un mod Spellhold Studios pour Baldur's Gate 2 : SoA & ToB</strong>
+        <hr />
+        <p class="about">
+          Auteur : K'aeloree
+        </p>
+        <p class="about">
+          <a href="http://www.spellholdstudios.net/ie/mazzy">Site du mod</a> &#8226;
+          <a href="http://www.shsforums.net/index.php?showforum=555">Forum du mod</a> &#8226;
+          Version: 2.1
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Crédits</a> &middot;
+          <a href="#version">Historique des versions</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+          <p>Un élément dont beaucoup trouvent les PNJ de Bioware dépourvus, c'est la relation plus complexe permise par les mods PNJ modernes - surtout en ce qui concerne les "amitiés", les relations que les PNJ ont avec le PJ lorsqu'ils n'ont pas une romance active.</p>
+          <p>Ce mod ajoute une série de dialogues pour tout PJ éligible, qui vous permettront d'en apprendre plus sur la vaillante petite-personne, et de vous lier d'amitié avec elle.  Mazzy n'est pas la femme la plus bavarde au monde, mais elle a certainement ses avis et les énoncera si elle le juge opportun - de même, si elle a des questions, elle n'hésitera pas à les poser.</p>
+          <p>Visitez le <a href="http://www.spellholdstudios.net/ie/mazzy">site web</a> ou le <a href="http://www.shsforums.net/index.php?showforum=555">forum</a> pour les dernières mises à jour.</p>
+          <address>
+            <span class="footer">Mazzy Friendship &gt; Introduction</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+          <h5>PC</h5>
+          <p>Mazzy Friendship est un mod WeiDU, compressé via une archive extractable .RAR. Décompressez simplement <em>"mazzy_v2.rar"</em> (<a href="http://www.rarlabs.com">WinRAR</a>) dans votre répertoire Baldur's Gate II et exécutez <em>"setup-mazzy.exe"</em>.
+          <p>Pour désinstaller, exécutez à nouveau <em>"setup-mazzy.exe"</em> et sélectionnez l'option de désinstallation.</p>
+          <h5>Compatibilité et ordre d'installation</h5>
+          <p>Le mod Mazzy Friendship devrait être compatible avec n'importe quel mod WeiDU, nous ne pouvons cependant pas tous les tester. Il n'est compatible qu'avec BGII : ToB. Si vous rencontrez une erreur, veuillez contactez K'aeloree (kae@spellholdstudios.net) ou bien postez dans les <a href="http://www.shsforums.net/index.php?showforum=555">forums</a>.</p>
+          <p>Bien qu'il ne soit pas requis pour faire correctement tourner Mazzy Friendship, il est toujours utile d'avoir installé la dernière version du <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.</p>
+          <address>
+            <span class="footer">Mazzy Friendship &gt; Installation</span> <a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+          <h2>Foire Aux Questions</h2>
+          <p><strong>Q : Mazzy Friendship est-il compatible avec le mod XYZ ?</strong><br />A : Il devrait l'être oui, mais nous n'avons pas testé tous les mods disponibles. Si vous rencontrez une erreur, veuillez contactez K'aeloree (kae@spellholdstudios.net) ou bien postez dans les <a href="http://www.shsforums.net">forums</a>.</p>
+          <p><strong>Q : Quand débutera l'amitié ?</strong><br/>A : Dans les 15 minutes après que Mazzy ait rejoint le groupe.</p>
+          <p><strong>Q : Ce mod ne respecte pas *du tout* le personnage.</strong><br />A : Je suis toujours à la recherche de moyens d'améliorer l'incarnation des personnages dans ce mod, envoyez-moi toute suggestion ou critique (kae@spellholdstudios.net) ou bien postez sur les <a href="http://www.shsforums.net">forums</a>.</p>
+          <p><strong>Q : As-tu l'intention d'étendre le mod en lui ajoutant d'autres dialogues dans le futur ?</strong><br />A : Je n'ai malheureusement pas le temps de travailler autant que je le voudrais sur le mod, mais si vous avez des suggestions ou des extensions à proposer, merci de poster sur le forum et je les regarderais dès que possible !</p>
+          <p><strong>Q : Si je veux commencer une partie à ToB, la partie ToB de l'amitié sera-t-elle accessible ?</strong><br />A : Je crains que non. Vous devez avoir joué à l'amitié de Shadows of Amn pour obtenir celle de ToB.</p>
+          <p><strong>Q : Ce mod change-t-il le jeu d'une façon ou d'une autre, hormis les nouveaux dialogues de Mazzy?</strong><br />A : Normalement non.</p>
+          <p><strong>Q : Y a-t-il une chance pour que des dialogues initiés par le joueur soient ajoutés dans le futur ?</strong><br />A : Ce n'est pas prévu pour l'heure, mais si des joueurs sont intéressés je serais ravi d'envisager d'en ajouter lors des versions futures.</p>
+          <p><strong>Q : Je souhaiterais traduire Mazzy Friendship dans une autre langue. Pourrais-tu TRAifier le mod ?</strong><br />A : Bien sûr, j'en serai heureux. Si vous souhaitez traduire, envoyez-moi un mot et je verrai ce que je peux faire pour la prochaine version.</p>
+          <p><strong>Q : Mon dieu, quel con. Pitié arrête de modder.</strong><br />A : ... nan. :D</p>
+          <address>
+            <span class="footer">Mazzy Friendship &gt; FAQ</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== C r e d i t s ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+          <h2>Crédits</h2>
+          <p>Déjà, un grand merci à tous ceux qui ont travaillé sur l'Interaction Expansion Project. Je n'aurais <em>rien</em> pu faire sans vous et vos encouragements ! Un grand merci aussi aux merveilleuses personnes qui se sont portées volontaires pour aider à tester, relire et corriger le mod. Je vous remercie beaucoup !</p>
+          <span class="t1">Auteur :</span> <span class="t2">K'aeloree</span><br />
+          <span class="t1">Codeur :</span> <span class="t2">K'aeloree</span><br />
+          <span class="t1">Correcteurs et Relecteurs :</span> <span class="t2">Tameon the Dragoon, Kellen</span><br />
+          <hr class="floatfix" />
+          <h5>Programmes/outils utilisés pour la création :</h5><br />
+          <ul>
+            <li><a href="http://www.weidu.org">WeiDU</a>, de Westley Weimer/Valerio Bigiani (the bigg)</li>
+            <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>, de Jon Olav Hauglid</li>
+            <li><a href="http://www.rarlab.com/">WinRAR</a>, d'Eugene Roshal/Alexander Roshal</li>
+            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, entretenu par igi</li>
+          </ul>
+          <h5>Droits d'auteur :</h5>
+          <div class="important">
+            <p>Mazzy Friendship a été développé par K'aeloree, basé sur le jeu Baldur's Gate II et son extension.</p>
+            <p>Tout le contenu du mod appartient à &copy; K'aeloree.</p>
+            <p>Baldur's Gate II : Shadows of Amn et Baldur's Gate II : Throne of Bhaal appartiennent à &copy; TSR, Inc. The BioWare Infinity Engine appartient à &copy; BioWare Corp.</p>
+            <p>Veuillez noter que tout partage ou hébergement de ce mod est expressément non désiré sans la permission de l'auteur.</p>
+          </div>
+          <address>
+            <span class="footer">Mazzy Friendship &gt; Credits</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+        <!-- ================== H i s t o r i q u e d e s V e r s i o n s ================== -->
+        <a name="version" id="version"></a>
+        <div class="content">
+          <h2>Historique des versions</h2>
+          <h6>22nd January 2013 - Version 2.1:</h6>
+          <ul>
+            <li>Multiple ToB fixes preventing talks from triggering (WHY HOW UGH I DON'T EVEN KNOW), thanks Lollorian!</li>
+          </ul>
+          <h6>31 December 2009 - Version 2.0:</h6>
+          <ul>
+            <li>Changed the basic code structure of the mod, fixed a few spelling errors</li>
+            <li>TRAified the mod</li>
+          </ul>
+          <h6>30 December 2008 - Version 1.0:</h6>
+          <ul>
+            <li>Initial release</li>
+          </ul>
+          <address>
+            <span class="footer">Mazzy Friendship &gt; Historique des versions</span> &#8226;<a href="#top">HAUT DE PAGE</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

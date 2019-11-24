@@ -1,0 +1,12 @@
+// Cooking dialogue
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    Global("I#MazzyFriendTalks","GLOBAL",14)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END

@@ -1,0 +1,65 @@
+// -------------------------------------------
+// Mazzy ToB Friendship Talks (3)
+// -------------------------------------------
+// Dialogues
+IF
+    InParty(Myself)
+    Global("I#MazzyFriendship","GLOBAL",1)
+    Global("I#MazzyToBFriendTalks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("I#MazzyToBFriendTalks","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",3600)
+END
+
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("I#MazzyToBFriendTalksTimer","GLOBAL")
+    Global("I#MazzyFriendship","GLOBAL",1)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(3)
+      Global("I#MazzyToBFriendTalks","GLOBAL",1)
+      Global("I#MazzyToBFriendTalks","GLOBAL",3)
+      Global("I#MazzyToBFriendTalks","GLOBAL",5)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Saradush talk
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("SaradushSacked","GLOBAL",1)
+    Global("I#MazzyToBFriendTalks","GLOBAL",2)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",600)
+    IncrementGlobal("I#MazzyToBFriendTalks","GLOBAL",1)
+END
+
+
+// Last talk
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyToBFriendTalksTimer","GLOBAL")
+    Dead("Illasera")
+    Dead("yaga01")
+    OR(3)
+      Dead("Abazigal1")
+      Dead("Sendai") 
+      Dead("Balth")
+    Global("I#MazzyToBFriendTalks","GLOBAL",4)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyToBFriendTalks","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",1800)
+END

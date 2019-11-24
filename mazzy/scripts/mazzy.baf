@@ -1,0 +1,452 @@
+// -------------------------------------------
+// Mazzy Friendship Talks (10)
+// -------------------------------------------
+// Dialogues
+IF
+    InParty(Myself)
+    Global("I#MazzyFriendCheck","GLOBAL",0)
+    Global("I#MazzyFriendship","GLOBAL",0)
+    !Alignment(Player1,MASK_EVIL)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",1200)
+    SetGlobal("I#MazzyFriendCheck","GLOBAL",1)
+    SetGlobal("I#MazzyFriendship","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    Global("I#MazzyFriendCheck","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("I#MazzyFriendCheck","GLOBAL",1)
+END
+
+
+// First talk
+IF
+    InParty(Myself)
+    Global("I#MazzyFriendCheck","GLOBAL",1)
+    Global("I#MazzyFriendship","GLOBAL",1)
+    Global("I#MazzyFriendTalks","GLOBAL",0)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Second talk
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    Global("I#MazzyFriendTalks","GLOBAL",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",3)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Shadow Thieves talk
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("WorkingForAran","GLOBAL",1)
+    Global("I#MazzyFriendAran","GLOBAL",0)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendAran","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("WorkingForAran","GLOBAL",1)
+    Global("I#MazzyFriendTalks","GLOBAL",4)
+    Global("I#MazzyFriendAran","GLOBAL",1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",5)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Vampire lair
+IF
+    InParty(Myself)
+    See(Player1)
+    OR(2)
+      AreaCheck("AR0801")
+      AreaCheck("AR0803")
+    Global("I#MazzyFriendVamps","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendVamps","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",100)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    OR(2)
+      AreaCheck("AR0801")
+      AreaCheck("AR0803")
+    Global("I#MazzyFriendTalks","GLOBAL",6)
+    Global("I#MazzyFriendVamps","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",7)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Brynnlaw
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    AreaCheck("AR1600")
+    Global("I#MazzyFriendBrynn","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendBrynn","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",900)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    AreaCheck("AR1600")
+    Global("I#MazzyFriendTalks","GLOBAL",8)
+    Global("I#MazzyFriendBrynn","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",9)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Adalon & the Underdark
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    Global("PlayerLooksLikeDrow","GLOBAL",1)
+    Global("I#MazzyFriendAdalon","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendAdalon","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",600)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    Global("I#MazzyFriendTalks","GLOBAL",10)
+    Global("I#MazzyFriendAdalon","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",11)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Out of the Underdark
+IF
+    InParty(Myself)
+    See(Player1)
+    AreaCheck("AR2500")
+    Global("I#MazzyFriendOutUD","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendOutUD","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",300)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("I#MazzyFriendTalks","GLOBAL",12)
+    Global("I#MazzyFriendOutUD","GLOBAL",1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",13)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// After Bodhi's death
+IF
+    InParty(Myself)
+    See(Player1)
+    Dead("c6bodhi")
+    Global("I#MazzyFriendBodhi","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendBodhi","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",240)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("I#MazzyFriendTalks","GLOBAL",16)
+    Global("I#MazzyFriendBodhi","GLOBAL",1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",17)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// In Suldanessellar
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    AreaCheck("AR2800")
+    Global("I#MazzyFriendSuld","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendSuld","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",120)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyFriendTalksTimer","GLOBAL")
+    AreaCheck("AR2800")
+    Global("I#MazzyFriendTalks","GLOBAL",18)
+    Global("I#MazzyFriendSuld","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyFriendTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyFriendTalks","GLOBAL",19)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// -------------------------------------------
+// Mazzy Scenery Talks (3)
+// -------------------------------------------
+
+// Order of the Radiant Heart
+IF
+    InParty(Myself)
+    See(Player1)
+    AreaCheck("AR0903")
+    Global("I#MazzyRadiantHeart","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyRadiantHeart","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyRadiantHeartTimer","GLOBAL",10)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyRadiantHeartTimer","GLOBAL")
+    Global("I#MazzyRadiantHeart","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyRadiantHeart","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("I#MazzyRadiantHeartTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyRadiantHeart","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Heroes of Trademeet
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("MakeStatue","GLOBAL",2)
+    AreaCheck("AR2000")
+    Global("I#MazzyTrademeet","GLOBAL",0)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyTrademeet","GLOBAL",1)
+    RealSetGlobalTimer("I#MazzyTrademeetTimer","GLOBAL",1200)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("I#MazzyTrademeetTimer","GLOBAL")
+    Global("I#MazzyTrademeet","GLOBAL",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("I#MazzyTrademeet","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("I#MazzyTrademeetTimer","GLOBAL")
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("I#MazzyTrademeet","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+
+// Ribald
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Mazzy",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !See([ENEMY])
+    !AreaCheck("AR0702")
+    Global("I#MazzyRibald","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
