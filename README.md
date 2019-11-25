@@ -1,7 +1,6 @@
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/MazzyFriendship?include_prereleases&color=darkred)<a name="top" id="top">
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English&color=limegreen)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Russian%20%7C%20Chinese&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Chinese&color=limegreen)
 
 <div align="center"><h1></a>Mazzy Friendship</h1>
 
@@ -26,7 +25,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## <a name="intro" id="intro"></a>Overview
 
-One of the things many find sorely lacking in the Bioware NPCs are the more complex relationships presented by modern NPC mods--especially in regards to "friendships," the relationships NPCs have with the PC when not romancing them.
+One of the things many find sorely lacking in the Bioware NPCs are the more complex relationships presented by modern NPC mods--especially in regards to "friendships", the relationships NPCs have with the PC when not romancing them.
 
 This mod adds a series of dialogues for an eligible PC, in which you can discover more about and befriend the valiant halfling. Mazzy is not the most talkative woman in the world, but she definitely has her opinions, and will voice them if she feels it appropriate--similarly if she has questions she will not be afraid to ask.
 
@@ -41,7 +40,7 @@ Visit the <a href="http://www.spellholdstudios.net/ie/mazzy">website</a> or <a h
 
 This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2EE), the conversion projects Baldur's Gate Trilogy (BGT) and Enhanced Edition Trilogy (EET).
 
-The Mazzy Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/index.php?showforum=555">forums</a>.
+The Mazzy Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/index.php?showforum=555">forums</a>.
 
 >Although it is not required for the Mazzy Friendship to function properly, it is always a good idea to install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.
 <div align="right"><a href="#top">Back to top</a></div>
@@ -72,7 +71,7 @@ The Enhanced Editions are actively supported games. Please note that every patch
 
 Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*), using <a href="http://www.7-zip.org/download.html">7zip</a>, <a href="http://www.rarlab.com/download.htm">WinRAR</a>, or another file compression utility that handles .zip files. On successful extraction, there should be a :file_folder: mazzy folder and a setup-mazzy.exe file in your game folder. To install, simply double-click **`setup-mazzy.exe`** and follow the instructions on screen.
 
-Run **`setup-mazzy.exe`** in your game folder to reinstall, uninstall or otherwise change the component settings.
+Run **`setup-mazzy.exe`** in your game folder to reinstall, un-install or otherwise change the component settings.
 
 ## 
 
@@ -88,7 +87,7 @@ In addition to the methods above for removing individual components, you can com
 ## <a name="faq" id="faq"></a>Frequently Asked Questions
 
 **Q: Is the Mazzy Friendship compatible with XYZ mod?**  
-A: It most certainly should be, but we have not tested it with every single mod available. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net">forums</a>.
+A: It most certainly should be, but we have not tested it with every single mod available. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net">forums</a>.
 
 **Q: When will the friendship start?**  
 A: It should begin around 20 minutes after Mazzy joins your party.
@@ -110,7 +109,6 @@ A: There are currently no plans for it, but if players are interested in it I wo
 
 **Q: I would like to translate the Mazzy friendship into another language. Any chance you could TRAify the mod?**  
 A: Sure, we'd be happy to. If you are interested in translating, just send us a line and I'll see what I can do for the next version.
-<div align="right"><a href="#top">Back to top</a></div>
 
 **Q: God, you're a prick. Please stop modding.**
 A: ... no. :laughing:
@@ -122,9 +120,8 @@ A: ... no. :laughing:
 
 ## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
-#### Concept and writing: Kaeloree
-#### Additional writing and coding: Lava Del'Vortel
-#### Editor: Rhaella
+#### Author: Kaeloree
+#### Editors and Proofreaders: Tameon the Dragoon, Kellen
 
 ## 
 
@@ -216,5 +213,5 @@ A: ... no. :laughing:
 
 ##### Version 1.0 (December 30, 2008)
 
-- Initial release
+- Initial release.
 <div align="right"><a href="#top">Back to top</a></div>
