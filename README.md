@@ -93,7 +93,7 @@ A: It most certainly should be, but we have not tested it with every single mod 
 A: It should begin around 20 minutes after Mazzy joins your party.
 
 **Q: This mod isn't in character at *all*.**  
-A: I'm always looking for ways to improve the characterisation in this mod, so please send any suggestions or criticism to me (kae@spellholdstudios.net) or post on the <a href="http://www.shsforums.net">forums</a>.
+A: I'm always looking for ways to improve the characterisation in this mod, so please send any suggestions or criticism to <a href="kae@spellholdstudios.net">me</a> or post on the <a href="http://www.shsforums.net">forums</a>.
 
 **Q: Have you got any plans to expand the mod by adding more dialogues in future?**  
 A: Unfortunately I don't have the time to do as much with the mod as I would like, but if you have any suggestions or additions please post on the forum and I'll check them out as soon as I can!
