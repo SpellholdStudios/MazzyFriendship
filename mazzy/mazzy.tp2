@@ -1,0 +1,113 @@
+// --------------------------------------
+// Mazzy Friendship Setup
+//
+// Version:   V3.0
+// Author(s): K'aeloree
+// --------------------------------------
+// Backup directory
+BACKUP ~mazzy/backup~
+
+// Error reports sent to K'aeloree
+AUTHOR ~kae@spellholdstudios.net~
+
+// Version
+VERSION ~v3.3~
+
+// Readme
+README ~mazzy/mazzyfriendship-readme-%LANGUAGE%.html~ ~mazzy/mazzyfriendship-readme-english.html~
+
+// Translations
+AUTO_TRA ~mazzy/translations/%s~
+
+ALWAYS
+
+	ACTION_IF GAME_IS ~eet~ BEGIN
+		OUTER_SET bg2_chapter = 12
+	END ELSE BEGIN
+		OUTER_SET bg2_chapter = 0
+	END
+	OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+		OUTER_SET bg2_chapter = bg2_chapter + 1
+		OUTER_SPRINT name_source ~bg2_chapter_%i%~
+		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+	END
+
+	/* Converts tra files to UTF-8 */
+
+	// No exception, everything needs to be converted
+	ACTION_DEFINE_ARRAY MazFrienoconvert BEGIN END
+
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY MazFriereload BEGIN setup END
+
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/Translations~
+			noconvert_array = MazFrienoconvert
+			reload_array = MazFriereload
+	END
+
+END
+
+
+LANGUAGE ~English~
+         ~English~
+         ~mazzy/translations/english/setup.tra~
+
+LANGUAGE ~Francais (traduction : Ixylon)~
+         ~french~
+         ~mazzy/translations/french/setup.tra~
+         
+LANGUAGE ~Deutsch (Uebersetzung vom Kerzenburgforum)~
+         ~german~
+         ~mazzy/translations/german/setup.tra~
+
+LANGUAGE ~Chinese (translation by Merzbau)~
+         ~schinese~
+         ~mazzy/translations/schinese/setup.tra~
+
+
+// Component
+BEGIN @0
+REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ @1
+
+
+/* CamDawg's custom IsValidForPartyDialogue() state. Thanks Cam!
+   covers STATE_CONFUSED, STATE_FEEBLEMINDED, STATE_SILENCED, STATE_DEAD, STATE_ACID_DEATH, STATE_FLAME_DEATH, STATE_EXPLODING_DEATH, STATE_STONE_DEATH, STATE_FROZEN_DEATH, STATE_HELPLESS, STATE_STUNNED, STATE_PANIC, STATE_BERSERK, STATE_SLEEPING */
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+
+// ----------
+// Dialogues
+// -----------
+COMPILE ~mazzy/dialogue/mazzyj.d~
+  USING ~mazzy/translations/english/mazzyj.tra~
+        ~mazzy/translations/%s/mazzyj.tra~
+
+COMPILE ~mazzy/dialogue/mazzy25j.d~
+  USING ~mazzy/translations/english/mazzy25j.tra~
+        ~mazzy/translations/%s/mazzy25j.tra~
+
+
+// Change trigger in her ToB talk
+COPY_EXISTING ~bmazzy25.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~Global("ExpBMazzy1","LOCALS",0)~ ~Global("ExpBMazzy1","LOCALS",0) !Global("I#MazzyFriendship","GLOBAL",1~
+	END
+BUT_ONLY
+
+
+// ----------------
+// Compile scripts
+// ----------------
+EXTEND_BOTTOM ~mazzy.bcs~   ~mazzy/scripts/mazzy.baf~
+EXTEND_BOTTOM ~mazzyd.bcs~  ~mazzy/scripts/mazzyd.baf~
+EXTEND_BOTTOM ~mazz25.bcs~  ~mazzy/scripts/mazz25.baf~
+
+
+// ------
+// Audio
+// ------
+COPY ~mazzy/audio/i#blank.wav~ ~override~
