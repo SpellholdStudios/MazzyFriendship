@@ -21,6 +21,7 @@ AUTO_TRA ~mazzy/translations/%s~
 
 ALWAYS
 
+	/* eet compatibility */
 	ACTION_IF GAME_IS ~eet~ BEGIN
 		OUTER_SET bg2_chapter = 12
 	END ELSE BEGIN
@@ -33,7 +34,6 @@ ALWAYS
 	END
 
 	/* Converts tra files to UTF-8 */
-
 	// No exception, everything needs to be converted
 	ACTION_DEFINE_ARRAY MazFrienoconvert BEGIN END
 
@@ -44,7 +44,7 @@ ALWAYS
 		INT_VAR
 			infer_charsets = 1
 		STR_VAR
-			tra_path = EVAL ~%MOD_FOLDER%/Translations~
+			tra_path = EVAL ~%MOD_FOLDER%/translations~
 			noconvert_array = MazFrienoconvert
 			reload_array = MazFriereload
 	END
@@ -71,7 +71,7 @@ LANGUAGE ~Chinese (translation by Merzbau)~
 
 // Component
 BEGIN @0
-REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ @1
+REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ @1 /* ToB is not installed! Please install the Throne of Bhaal expansion before installing the Mazzy friendship. */
 
 
 /* CamDawg's custom IsValidForPartyDialogue() state. Thanks Cam!
@@ -94,7 +94,7 @@ COMPILE ~mazzy/dialogue/mazzy25j.d~
 // Change trigger in her ToB talk
 COPY_EXISTING ~bmazzy25.dlg~ ~override~
 	DECOMPILE_AND_PATCH BEGIN
-		REPLACE_TEXTUALLY ~Global("ExpBMazzy1","LOCALS",0)~ ~Global("ExpBMazzy1","LOCALS",0) !Global("I#MazzyFriendship","GLOBAL",1~
+		REPLACE_TEXTUALLY ~Global("ExpBMazzy1","LOCALS",0)~ ~Global("ExpBMazzy1","LOCALS",0) !Global("I#MazzyFriendship","GLOBAL",1)~
 	END
 BUT_ONLY
 
