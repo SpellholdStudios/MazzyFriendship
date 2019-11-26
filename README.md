@@ -12,7 +12,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 **Author:** K'aeloree  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/mazzy">Spellhold Studios</a>  
-**Mod Forum:** <a href="http://www.shsforums.net/index.php?showforum=555">Mazzy Friendship</a><br /><br />
+**Mod Forum:** <a href="http://www.shsforums.net/forum/573-mazzy-friendship/">Mazzy Friendship</a><br /><br />
 
 
 <div align="center">
@@ -30,7 +30,7 @@ One of the things many find sorely lacking in the Bioware NPCs are the more comp
 This mod adds a series of dialogues for an eligible PC, in which you can discover more about and befriend the valiant halfling. Mazzy is not the most talkative woman in the world, but she definitely has her opinions, and will voice them if she feels it appropriate--similarly if she has questions she will not be afraid to ask.
 
 
-Visit the <a href="http://www.spellholdstudios.net/ie/mazzy">website</a> or <a href="http://www.shsforums.net/index.php?showforum=555">forum</a> for all the latest updates.
+Visit the <a href="http://www.spellholdstudios.net/ie/mazzy">website</a> or <a href="http://www.shsforums.net/forum/573-mazzy-friendship/">forum</a> for all the latest updates.
 
 
 <hr>
@@ -40,7 +40,7 @@ Visit the <a href="http://www.spellholdstudios.net/ie/mazzy">website</a> or <a h
 
 This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2EE), the conversion projects Baldur's Gate Trilogy (BGT) and Enhanced Edition Trilogy (EET).
 
-The Mazzy Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/index.php?showforum=555">forums</a>.
+The Mazzy Friendship mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/forum/573-mazzy-friendship/">forums</a>.
 
 >Although it is not required for the Mazzy Friendship to function properly, it is always a good idea to install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.
 <div align="right"><a href="#top">Back to top</a></div>
@@ -87,13 +87,13 @@ In addition to the methods above for removing individual components, you can com
 ## <a name="faq" id="faq"></a>Frequently Asked Questions
 
 **Q: Is the Mazzy Friendship compatible with XYZ mod?**  
-A: It most certainly should be, but we have not tested it with every single mod available. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net">forums</a>.
+A: It most certainly should be, but we have not tested it with every single mod available. If you do encounter an error, please contact <a href="kae@spellholdstudios.net">K'aeloree</a> or alternatively post on the <a href="http://www.shsforums.net/forum/573-mazzy-friendship/">forums</a>.
 
 **Q: When will the friendship start?**  
 A: It should begin around 20 minutes after Mazzy joins your party.
 
 **Q: This mod isn't in character at *all*.**  
-A: I'm always looking for ways to improve the characterisation in this mod, so please send any suggestions or criticism to <a href="kae@spellholdstudios.net">me</a> or post on the <a href="http://www.shsforums.net">forums</a>.
+A: I'm always looking for ways to improve the characterisation in this mod, so please send any suggestions or criticism to <a href="kae@spellholdstudios.net">me</a> or post on the <a href="http://www.shsforums.net/forum/573-mazzy-friendship/">forums</a>.
 
 **Q: Have you got any plans to expand the mod by adding more dialogues in future?**  
 A: Unfortunately I don't have the time to do as much with the mod as I would like, but if you have any suggestions or additions please post on the forum and I'll check them out as soon as I can!
@@ -163,6 +163,7 @@ A: ... no. :laughing:
 - Added *mazzy.ini* metadata file to support AL|EN's "Project Infinity".
 - tp2 file: added credits for translations and replaced old-school `DECOMPILE_DLG_TO_D` plus `COMPILE_D_TO_DLG` process with more accurate `DECOMPILE_AND_PATCH` command.
 - README command now accepts translated files.
+- Component: added *DESIGNATED* number and "*mazzy_friendship*" LABEL.
 - Updated deprecated modding tools links.
 - Lower cased files.
 - Updated and renamed readme files to *mazzyfriendship-readme-%LANGUAGE%.html*.

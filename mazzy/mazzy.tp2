@@ -69,10 +69,13 @@ LANGUAGE ~Chinese (translation by Merzbau)~
          ~mazzy/translations/schinese/setup.tra~
 
 
-// Component
+/* =================================== *
+ *    Mazzy Friendship for BG2: ToB    *
+ * =================================== */
+
 BEGIN @0
 REQUIRE_PREDICATE GAME_IS ~bg2ee tob bgt eet~ @1 /* ToB is not installed! Please install the Throne of Bhaal expansion before installing the Mazzy friendship. */
-
+DESIGNATED 0 LABEL ~mazzy_friendship~
 
 /* CamDawg's custom IsValidForPartyDialogue() state. Thanks Cam!
    covers STATE_CONFUSED, STATE_FEEBLEMINDED, STATE_SILENCED, STATE_DEAD, STATE_ACID_DEATH, STATE_FLAME_DEATH, STATE_EXPLODING_DEATH, STATE_STONE_DEATH, STATE_FROZEN_DEATH, STATE_HELPLESS, STATE_STUNNED, STATE_PANIC, STATE_BERSERK, STATE_SLEEPING */
@@ -81,7 +84,7 @@ APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 
 // ----------
 // Dialogues
-// -----------
+// ----------
 COMPILE ~mazzy/dialogue/mazzyj.d~
   USING ~mazzy/translations/english/mazzyj.tra~
         ~mazzy/translations/%s/mazzyj.tra~
