@@ -8,10 +8,11 @@
 BACKUP ~mazzy/backup~
 
 // Error reports sent to K'aeloree
-AUTHOR ~kae@spellholdstudios.net~
+//AUTHOR ~kae@spellholdstudios.net~
+SUPPORT ~http://www.shsforums.net/forum/573-mazzy-friendship/~
 
 // Version
-VERSION ~v3.3~
+VERSION ~v3.4~
 
 // Readme
 README ~mazzy/mazzyfriendship-readme-%LANGUAGE%.html~ ~mazzy/mazzyfriendship-readme-english.html~
