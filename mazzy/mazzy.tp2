@@ -12,7 +12,7 @@ BACKUP ~mazzy/backup~
 SUPPORT ~http://www.shsforums.net/forum/573-mazzy-friendship/~
 
 // Version
-VERSION ~v3.4~
+VERSION ~v3.5~
 
 // Readme
 README ~mazzy/mazzyfriendship-readme-%LANGUAGE%.html~ ~mazzy/mazzyfriendship-readme-english.html~
@@ -57,7 +57,7 @@ LANGUAGE ~English~
          ~English~
          ~mazzy/translations/english/setup.tra~
 
-LANGUAGE ~Francais (traduction : Ixylon)~
+LANGUAGE ~Francais (traduction : Ixion)~
          ~french~
          ~mazzy/translations/french/setup.tra~
          
@@ -68,6 +68,10 @@ LANGUAGE ~Deutsch (Uebersetzung vom Kerzenburgforum)~
 LANGUAGE ~Chinese (translation by Merzbau)~
          ~schinese~
          ~mazzy/translations/schinese/setup.tra~
+
+LANGUAGE ~Russian (translation by Evilkiss & Arcanecoast.ru)~
+         ~russian~
+         ~mazzy/translations/russian/setup.tra~
 
 
 /* =================================== *
