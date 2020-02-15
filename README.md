@@ -1,6 +1,6 @@
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/MazzyFriendship?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Chinese&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20German%20%7C%20Russian%20%7C%20Chinese&color=limegreen)
 
 <div align="center"><h1></a>Mazzy Friendship</h1>
 
@@ -110,7 +110,7 @@ A: There are currently no plans for it, but if players are interested in it I wo
 **Q: I would like to translate the Mazzy friendship into another language. Any chance you could TRAify the mod?**  
 A: Sure, we'd be happy to. If you are interested in translating, just send us a line and I'll see what I can do for the next version.
 
-**Q: God, you're a prick. Please stop modding.**
+**Q: God, you're a prick. Please stop modding.**  
 A: ... no. :laughing:
 <div align="right"><a href="#top">Back to top</a></div>
 
@@ -129,9 +129,10 @@ A: ... no. :laughing:
 
 - First up, a huge thank you to everyone who has worked in the Interaction Expansion Project. Could *not* have done it without you and your prodding! And a big thanks to the wonderful people who volunteered to help test, proofread and edit the mod. It is very much appreciated!
 - AL|EN: Wrote process which automatically provides Windows, Linux and Mac versions in the same archive file.
-- French translation: Ixylon.
+- French translation: Ixion.
 - German translation: Deutsche Uebersetzung vom Kerzenburgforum.
 - Chinese translation: Merzbau.
+- Russian translation: Evilkiss & Arcanecoast.ru.
 
 ## 
 
@@ -157,6 +158,12 @@ A: ... no. :laughing:
 
 ## <a name="versions" id="versions"></a>Versions History
 
+##### Version 3.5 (February 15, 2020)
+
+- Added Russian translation: Evilkiss & Arcanecoast.ru.
+
+## 
+
 ##### Version 3.4 (December 14, 2019)
 
 - Fixed an issue with *Auto-Package Generator tool*: new version of MacOS (Catalina) prevented the mod to be installed.
@@ -181,7 +188,7 @@ A: ... no. :laughing:
 
 ##### Version 3.2 (April 14, 2018)
 
-- Added Chinese translation - Merzbau.
+- Added Chinese translation: Merzbau.
 - Implemented Lollorian's fixed for ToB talks.
 
 ## 
@@ -189,7 +196,7 @@ A: ... no. :laughing:
 ##### Version 3.1 (August 19, 2017)
 
 - Fixed a missing token in one of the dialogues.
-- Added German translation - Kerzenburgforum.
+- Added German translation: Kerzenburgforum.
 
 ## 
 
@@ -201,7 +208,7 @@ A: ... no. :laughing:
 
 ##### Version 2.2 (November 14, 2013)
 
-- >Added French translation - Ixylon.
+- Added French translation: Ixion.
 
 ## 
 
